@@ -1,0 +1,43 @@
+header {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.menu-btn {
+	width: 40px;
+	height: 40px;
+	z-index:2;
+    font-size: 36px;
+}
+.menu-btn::before {
+    content: "☰";
+}
+.menu-btn.active::before {
+    content: "✖";
+}
+
+.menu {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	padding: 15px;
+    background: #bebdb9;
+	transform: translateX(-100%);
+	transition: transform 0.5s; 
+}
+
+.menu.active {
+	transform: translateX(0);
+}
+
+.menu li {
+	list-style-type: none;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+li>a {
+    color: black;
+    text-decoration: none;
+}

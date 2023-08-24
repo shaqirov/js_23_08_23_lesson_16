@@ -13,8 +13,15 @@ menuBtn.addEventListener('click', function(){
 /* Задание 2: Интерактивное меню
 
 Создайте простое интерактивное меню, используя HTML, CSS и JavaScript. У вас будет список элементов меню, и при клике на каждый элемент меню он будет менять свой стиль. Используйте свойство classList для добавления и удаления классов, а также свойство style для изменения стилей элементов.*/
-
-
+const menuItems = document.querySelectorAll('.menu-item')
+menuItems.forEach(item => {
+	item.addEventListener('click', () => {
+		menuItems.forEach(menuItem => {
+			menuItem.classList.remove('active')
+		})
+		item.classList.add('active')
+	})
+});
 
 
 /* Задание 3:Spread оператор
